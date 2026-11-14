@@ -1,0 +1,1296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareFlow — Patient Follow-up &amp; Care Coordination | By CAPSIC CARE</title>
+  <meta name="description" content="CareFlow helps independent doctors and private chambers in Howrah and Kolkata manage post-consultation follow-ups, patient reminders, and prescribed diagnostic coordination through a dedicated patient-care support team." />
+  <meta name="keywords" content="independent doctors in Howrah, doctor chambers in Howrah, patient follow-up services in Howrah, independent doctors in Kolkata, private doctor chambers in Kolkata, patient follow-up management for doctors, patient coordination services for private practice, Capsic Care" />
+  <link rel="icon" type="image/png" href="assets/brand/capsic-logo.png" />
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            teal: {
+              50: '#f0fdfa',
+              100: '#ccfbf1',
+              200: '#99f6e4',
+              300: '#5eead4',
+              400: '#2dd4bf',
+              500: '#14b8a6',
+              600: '#0d9488',
+              700: '#0f766e',
+              800: '#115e59',
+              900: '#134e4a',
+              950: '#042f2e'
+            },
+            slate: {
+              850: '#151f32',
+              900: '#0f172a',
+              950: '#020617'
+            }
+          },
+          fontFamily: {
+            sans: ['Geist', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['Geist Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom CSS for Capsic Care typography, glassmorphism, and slider styling -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-white text-slate-900 font-sans antialiased selection:bg-teal-100 selection:text-teal-900">
+
+  <!-- ========================================== -->
+  <!-- 1. TOP NOTICE / ANNOUNCEMENT BAR (Capsic Care Identity) -->
+  <!-- ========================================== -->
+  <div class="bg-gradient-to-r from-teal-800 via-teal-900 to-slate-950 text-white text-[11px] sm:text-xs py-1.5 px-3 sm:px-4 border-b border-teal-600/30 shadow-sm relative z-50">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+      <div class="flex items-center gap-1.5 font-medium tracking-wide">
+        <span class="bg-teal-500/20 text-teal-300 px-2 py-0.5 rounded-full font-bold text-[10px] uppercase border border-teal-400/30 shrink-0">Doctor Chamber Initiative</span>
+        <span class="text-slate-100">
+          🩺 <strong class="text-white">CareFlow by CAPSIC CARE</strong>: Dedicated 3-Month Free Trial for Independent Doctors &amp; Chambers in <strong class="text-amber-300">Howrah &amp; Kolkata</strong>.
+        </span>
+      </div>
+      <div class="flex items-center gap-2 text-teal-200 text-[11px] font-semibold shrink-0">
+        <span class="hidden sm:inline text-slate-300">Doctor Chamber Desk:</span>
+        <a href="tel:+918337077656" class="hover:text-white underline decoration-teal-400 underline-offset-2 transition-colors font-bold">
+          📞 8337077656
+        </a>
+        <span class="text-slate-400">|</span>
+        <a href="https://wa.me/918337077656?text=Hello%20Capsic%20Care%2C%20I%20am%20a%20doctor%20in%20Howrah%2FKolkata%20inquiring%20about%20CareFlow%20patient%20follow-up%20coordination." target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-500 text-white px-2 py-0.5 rounded-md text-[10px] font-bold transition-all shadow-sm flex items-center gap-1">
+          WhatsApp Desk
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- 2. HEADER & NAVIGATION BAR (Capsic Care Glassmorphism) -->
+  <!-- ========================================== -->
+  <header id="site-header" class="sticky top-0 left-0 right-0 z-40 transition-all duration-300 ease-out">
+    <nav class="glass bg-white/92 backdrop-blur-xl border-b border-slate-200/80 rounded-b-2xl md:rounded-b-3xl shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16 md:h-20">
+          
+          <!-- Brand Logo: CareFlow by CAPSIC CARE -->
+          <div class="flex items-center gap-3">
+            <a href="https://www.capsic.in/" target="_blank" title="Visit Capsic Care Main Site" class="flex items-center gap-2 group hover:opacity-90 transition-opacity">
+              <img src="assets/brand/capsic-logo.png" alt="Capsic Care Logo" class="w-9 h-9 md:w-10 md:h-10 rounded-xl object-contain shadow-sm border border-slate-100" />
+            </a>
+            <div class="h-8 w-px bg-slate-200 hidden sm:block"></div>
+            <a href="#overview" class="flex flex-col">
+              <span class="text-xl md:text-2xl font-black text-slate-900 tracking-tight leading-none">
+                Care<span class="text-teal-600">Flow</span>
+              </span>
+              <span class="text-[9.5px] font-bold text-slate-500 uppercase tracking-wider leading-tight mt-0.5">
+                BY CAPSIC CARE
+              </span>
+            </a>
+          </div>
+
+          <!-- Desktop Navigation Links -->
+          <div class="hidden lg:flex items-center space-x-1 flex-1 ml-10">
+            <a href="#overview" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">Overview</a>
+            <a href="#chamber-challenge" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">The Chamber Reality</a>
+            <a href="#how-it-works" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">How It Works</a>
+            <a href="#calculator" class="px-3 py-2 rounded-lg text-sm font-semibold text-teal-700 bg-teal-50/60 hover:bg-teal-100/60 transition-colors border border-teal-200/50">Practice Calculator</a>
+            <a href="#coverage" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">Howrah &amp; Kolkata</a>
+            <a href="#faq" class="px-3 py-2 rounded-lg text-sm font-medium text-slate-700 hover:bg-teal-50 hover:text-teal-600 transition-colors">Doctor FAQ</a>
+          </div>
+
+          <!-- Header Action CTA -->
+          <div class="hidden md:flex items-center gap-3">
+            <a href="#calculator" class="text-xs font-bold text-slate-600 hover:text-teal-700 px-3 py-2 transition-colors">
+              Calculate Benefits
+            </a>
+            <button class="open-trial-modal px-5 py-2.5 bg-teal-600 hover:bg-teal-700 text-white rounded-xl text-xs sm:text-sm font-bold shadow-md shadow-teal-600/20 transition-all flex items-center gap-1.5 active:scale-95">
+              <span>Start 3-Month Free Trial</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </button>
+          </div>
+
+          <!-- Mobile Hamburger Button -->
+          <div class="lg:hidden flex items-center">
+            <button id="mobile-menu-btn" class="p-2 rounded-lg text-slate-700 hover:bg-slate-100 transition-colors" aria-label="Toggle Navigation Menu">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="18" y2="18"></line></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Navigation -->
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-100 bg-white/98 px-4 pt-3 pb-6 space-y-2">
+        <a href="#overview" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 hover:bg-teal-50 hover:text-teal-600">Overview</a>
+        <a href="#chamber-challenge" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 hover:bg-teal-50 hover:text-teal-600">The Solo Chamber Challenge</a>
+        <a href="#how-it-works" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 hover:bg-teal-50 hover:text-teal-600">How CareFlow Works</a>
+        <a href="#calculator" class="block px-3 py-2 rounded-lg text-sm font-semibold text-teal-700 bg-teal-50">Practice Revenue Calculator</a>
+        <a href="#coverage" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 hover:bg-teal-50 hover:text-teal-600">Howrah &amp; Kolkata Coverage</a>
+        <a href="#faq" class="block px-3 py-2 rounded-lg text-sm font-medium text-slate-800 hover:bg-teal-50 hover:text-teal-600">Frequently Asked Questions</a>
+        <div class="pt-2">
+          <button class="open-trial-modal w-full py-3 bg-teal-600 text-white rounded-xl text-sm font-bold shadow-md shadow-teal-500/20 text-center">
+            Start Your 3-Month Free Trial
+          </button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ========================================== -->
+    <!-- 3. HERO SECTION (Doctor-Focused & Capsic Style) -->
+    <!-- ========================================== -->
+    <section id="overview" class="relative overflow-hidden bg-white border-b border-slate-200 pt-12 pb-16 sm:pt-20 sm:pb-24 md:pt-24 md:pb-28">
+      <!-- Background Gradients & Glow matching Capsic Care -->
+      <div class="absolute inset-0 bg-gradient-to-br from-teal-50/80 via-white to-slate-50 z-0"></div>
+      <div class="absolute top-0 right-0 w-[450px] sm:w-[750px] h-[450px] sm:h-[750px] bg-teal-500/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          <!-- Left Column: Doctor-Targeted Messaging -->
+          <div class="lg:col-span-7">
+            
+            <!-- Badges & Identity -->
+            <div class="flex flex-wrap items-center gap-2 mb-5 sm:mb-6">
+              <span class="inline-flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 bg-teal-100 text-teal-800 font-bold tracking-wider rounded-full text-xs sm:text-sm border border-teal-200 shadow-sm">
+                <span class="relative flex h-2.5 w-2.5">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-teal-500"></span>
+                </span>
+                CAREFLOW — BY CAPSIC CARE
+              </span>
+
+              <span class="px-3 py-1 sm:px-3.5 sm:py-1.5 bg-slate-100 text-slate-700 font-bold text-[11px] sm:text-xs rounded-full border border-slate-200 flex items-center gap-1.5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600 shrink-0"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                Howrah &amp; Kolkata Private Chambers
+              </span>
+            </div>
+
+            <!-- Positioning & Tagline -->
+            <div class="mb-3">
+              <span class="text-xs sm:text-sm font-extrabold uppercase tracking-widest text-teal-700">
+                Patient Follow-up &amp; Care Coordination • Care Beyond Consultation.
+              </span>
+            </div>
+
+            <!-- Mandatory Hero Headline -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-black text-slate-900 leading-[1.15] mb-5 tracking-tight">
+              You Take Care of Your Patients. <br class="hidden sm:inline"/>
+              <span class="text-teal-600">We'll Help You Stay Connected.</span>
+            </h1>
+
+            <!-- Mandatory Supporting Text -->
+            <p class="text-base sm:text-lg md:text-xl text-slate-700 mb-6 max-w-2xl leading-relaxed font-normal">
+              CareFlow helps independent doctors manage post-consultation follow-ups, patient reminders and prescribed diagnostic coordination through a dedicated patient-care support team.
+            </p>
+
+            <!-- Mandatory Trust Statement -->
+            <div class="flex items-center gap-2 mb-8 text-xs sm:text-sm font-semibold text-slate-600 bg-white/80 border border-slate-200/90 rounded-xl px-3.5 py-2.5 max-w-xl shadow-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-emerald-600 shrink-0"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path><path d="m9 12 2 2 4-4"></path></svg>
+              <span><strong>Built for Independent Doctors and Private Chambers in Howrah &amp; Kolkata.</strong></span>
+            </div>
+
+            <!-- Action CTAs -->
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-8">
+              <!-- Main CTA -->
+              <button class="open-trial-modal px-7 py-3.5 sm:px-8 sm:py-4 bg-teal-600 text-white rounded-xl font-bold hover:bg-teal-700 transition-colors shadow-lg shadow-teal-500/25 text-center flex items-center justify-center gap-2 text-sm sm:text-base active:scale-98">
+                <span>Start Your 3-Month Free Trial</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </button>
+
+              <!-- Secondary CTA -->
+              <a href="#calculator" class="px-7 py-3.5 sm:px-8 sm:py-4 bg-slate-100 hover:bg-slate-200 text-slate-800 border border-slate-300 rounded-xl font-bold transition-all text-center flex items-center justify-center gap-2 text-sm sm:text-base">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-600"><rect width="16" height="20" x="4" y="2" rx="2"></rect><line x1="8" x2="16" y1="6" y2="6"></line><line x1="16" x2="16" y1="14" y2="18"></line><path d="M16 10h.01"></path><path d="M12 10h.01"></path><path d="M8 10h.01"></path><path d="M12 14h.01"></path><path d="M8 14h.01"></path><path d="M12 18h.01"></path><path d="M8 18h.01"></path></svg>
+                <span>Calculate Your Practice's Potential Benefit</span>
+              </a>
+            </div>
+
+            <!-- Micro Guarantees / Highlights -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs text-slate-600 pt-2 border-t border-slate-200/80">
+              <div class="flex items-center gap-2 font-medium">
+                <span class="text-teal-600 font-bold">✓</span> 90 Days 100% Free Trial
+              </div>
+              <div class="flex items-center gap-2 font-medium">
+                <span class="text-teal-600 font-bold">✓</span> Zero Software to Install
+              </div>
+              <div class="flex items-center gap-2 font-medium col-span-2 sm:col-span-1">
+                <span class="text-teal-600 font-bold">✓</span> Bengali &amp; Hindi Calling
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Interactive Chamber Coordination Preview Card -->
+          <div class="lg:col-span-5">
+            <div class="bg-white rounded-2xl p-6 sm:p-7 shadow-xl border border-slate-200 relative overflow-hidden capsic-card-hover">
+              
+              <!-- Card Header -->
+              <div class="flex items-center justify-between border-b border-slate-100 pb-4 mb-5">
+                <div class="flex items-center gap-3">
+                  <div class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 font-bold text-lg">
+                    👨‍⚕️
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-bold text-slate-900 leading-tight">Chamber Care Desk</h3>
+                    <p class="text-[11px] text-slate-500">Live Post-Consultation Workflow</p>
+                  </div>
+                </div>
+                <span class="px-2.5 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 text-[11px] font-bold rounded-full flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> Active Desk
+                </span>
+              </div>
+
+              <!-- Realistic Timeline Stream for Solo Chamber -->
+              <div class="space-y-4 text-xs">
+                
+                <!-- Step A: Consultation Completed -->
+                <div class="flex gap-3 items-start p-3 bg-slate-50 rounded-xl border border-slate-150">
+                  <div class="w-6 h-6 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">1</div>
+                  <div>
+                    <div class="flex items-center justify-between gap-2">
+                      <span class="font-bold text-slate-800">OPD Consultation Done</span>
+                      <span class="text-[10px] text-slate-600">Day 1</span>
+                    </div>
+                    <p class="text-slate-600 mt-0.5">Doctor advises 14-day follow-up review + Fasting Blood Sugar &amp; Lipid Profile test.</p>
+                  </div>
+                </div>
+
+                <!-- Step B: Courteous Human Follow-up -->
+                <div class="flex gap-3 items-start p-3 bg-teal-50/70 rounded-xl border border-teal-200/80">
+                  <div class="w-6 h-6 rounded-full bg-teal-700 text-white flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">2</div>
+                  <div>
+                    <div class="flex items-center justify-between gap-2">
+                      <span class="font-bold text-teal-900">CareFlow Coordinator Call</span>
+                      <span class="text-[10px] text-teal-800 font-semibold">Day 4</span>
+                    </div>
+                    <p class="text-teal-900 mt-0.5 leading-relaxed">
+                      "Nomoshkar, we are calling on behalf of Dr. Roy's Chamber. Did you have any difficulty finding your prescribed medicines?"
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Step C: Diagnostic Coordination -->
+                <div class="flex gap-3 items-start p-3 bg-slate-50 rounded-xl border border-slate-150">
+                  <div class="w-6 h-6 rounded-full bg-teal-600 text-white flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">3</div>
+                  <div>
+                    <div class="flex items-center justify-between gap-2">
+                      <span class="font-bold text-slate-800">Prescribed Test Reminder</span>
+                      <span class="text-[10px] text-slate-600">Day 10</span>
+                    </div>
+                    <p class="text-slate-600 mt-0.5">Patient reminded to complete tests. Home sample collection arranged in Howrah via Capsic Care if patient prefers.</p>
+                  </div>
+                </div>
+
+                <!-- Step D: Confirmed Follow-up Visit -->
+                <div class="flex gap-3 items-start p-3 bg-emerald-50/80 rounded-xl border border-emerald-200">
+                  <div class="w-6 h-6 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-[11px] shrink-0 mt-0.5">✓</div>
+                  <div>
+                    <div class="flex items-center justify-between gap-2">
+                      <span class="font-bold text-emerald-900">Chamber Return Confirmed</span>
+                      <span class="text-[10px] text-emerald-800 font-bold">Day 14 (Review Date)</span>
+                    </div>
+                    <p class="text-emerald-900 mt-0.5 font-medium">Patient arrives on time with blood reports ready on doctor's desk. Complete clinical cycle.</p>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Card Bottom Note -->
+              <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
+                <span>Coordination by Capsic Care trained desk</span>
+                <span class="text-teal-700 font-bold">Zero doctor administrative time</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 4. SECTION: UNDERSTAND THE INDEPENDENT DOCTOR -->
+    <!-- ========================================== -->
+    <section id="chamber-challenge" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100 px-3.5 py-1 rounded-full border border-teal-200">
+            For Solo Practitioners &amp; Individual Chambers
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            The Everyday Reality of an Independent Practice
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg text-slate-600 mt-3 leading-relaxed">
+            As an independent doctor in Howrah or Kolkata, you give your complete clinical dedication to every patient. But once the consultation ends, managing the follow-up loop is an uphill battle without dedicated administrative staff.
+          </p>
+        </div>
+
+        <!-- 6 Doctor Chamber Challenges Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <!-- Card 1 -->
+          <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 capsic-card-hover">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 text-xl font-bold mb-4">
+              📅
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">Patients Discontinue Follow-up Too Early</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              When initial acute symptoms improve after 4 or 5 days of medicine, patients frequently assume they are cured and fail to return for their crucial 14-day or 30-day clinical review.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 capsic-card-hover">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 text-xl font-bold mb-4">
+              🧪
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">Prescribed Investigations Remain Incomplete</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              You prescribe an ultrasound, lipid panel, or HbA1c to assess treatment efficacy. Without a reminder, patients postpone the test, leaving you without necessary clinical data.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 capsic-card-hover">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 text-xl font-bold mb-4">
+              ⏳
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">Chambers Have Limited Support Staff</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Your chamber assistant or compounder is fully occupied managing OPD queues, files, and physical tokens. Expecting them to dial 300+ patients monthly is operationally impossible.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 capsic-card-hover">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 text-xl font-bold mb-4">
+              🚗
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">Consulting Across Multiple Locations</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Visiting private chambers in Bankra, Shibpur, or Shyambazar leaves no time between morning and evening clinics to call patients individually regarding their progress.
+            </p>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="bg-white p-7 rounded-2xl shadow-sm border border-slate-200 capsic-card-hover">
+            <div class="w-12 h-12 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 text-xl font-bold mb-4">
+              💊
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-slate-900 mb-2">Chronic Disease Management Drop-offs</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Hypertension, diabetes, thyroid, and cardiac patients require consistent titration and checkups. When follow-ups drop, long-term health outcomes and doctor-patient bonds suffer.
+            </p>
+          </div>
+
+          <!-- Card 6: Supportive Tone Highlight -->
+          <div class="bg-gradient-to-br from-teal-50 to-emerald-50/60 p-7 rounded-2xl shadow-sm border border-teal-200 capsic-card-hover">
+            <div class="w-12 h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center text-xl font-bold mb-4">
+              🤝
+            </div>
+            <h3 class="text-base sm:text-lg font-bold text-teal-950 mb-2">CareFlow is Operational Support, Not Criticism</h3>
+            <p class="text-xs sm:text-sm text-slate-700 leading-relaxed">
+              You are doing everything right clinically. CareFlow simply acts as your chamber's courteous, dedicated coordination extension, closing the administrative loop seamlessly.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 5. SECTION: HOW IT WORKS (ZERO SOFTWARE FRICTION) -->
+    <!-- ========================================== -->
+    <section id="how-it-works" class="py-16 sm:py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100 px-3.5 py-1 rounded-full border border-teal-200">
+            Frictionless Chamber Workflow
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            How CareFlow Works in an Independent Chamber
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg text-slate-600 mt-3 leading-relaxed">
+            We designed CareFlow specifically so that doctors and compounders do not have to learn complex software, log into heavy dashboards, or change their consultation habits.
+          </p>
+        </div>
+
+        <!-- 3 Step Flow -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+          
+          <!-- Step 1 -->
+          <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative group hover:border-teal-400 transition-colors">
+            <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-teal-600/30">
+              1
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3">You Consult as Usual</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Write your prescription, note the advised review date (e.g. "Review in 14 days"), and list any required investigations (e.g. HbA1c, LFT, CBC).
+            </p>
+            <div class="p-3 bg-white rounded-xl border border-slate-200 text-xs text-slate-700">
+              <span class="font-bold text-teal-700">Chamber Action:</span> At the end of the OPD session, your assistant sends the daily patient contact list or prescription slips via secure WhatsApp / chamber sheet. Zero software needed.
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative group hover:border-teal-400 transition-colors">
+            <div class="w-12 h-12 rounded-2xl bg-teal-600 text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-teal-600/30">
+              2
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3">CareFlow Coordinates with Care</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Our trained patient-care coordinators reach out courteously in Bengali, Hindi, or English on behalf of your chamber:
+            </p>
+            <ul class="space-y-2 text-xs text-slate-600">
+              <li class="flex items-start gap-2">
+                <span class="text-teal-600 font-bold">✓</span> <span>Check medicine tolerance &amp; availability</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-teal-600 font-bold">✓</span> <span>Remind patient of prescribed blood tests</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-teal-600 font-bold">✓</span> <span>Confirm the upcoming follow-up appointment</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative group hover:border-teal-400 transition-colors">
+            <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md shadow-emerald-600/30">
+              3
+            </div>
+            <h3 class="text-lg font-bold text-slate-900 mb-3">Patient Returns Prepared</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Your patient arrives on the scheduled review date with their investigation reports ready. No dropped follow-ups, no discontinued treatment cycles.
+            </p>
+            <div class="p-3 bg-emerald-50 rounded-xl border border-emerald-200 text-xs text-emerald-900">
+              <span class="font-bold">Clinical Outcome:</span> Enhanced doctor-patient trust, timely therapy adjustments, and predictable chamber appointment schedules.
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Diagnostic Coordination Notice -->
+        <div class="mt-10 p-5 bg-gradient-to-r from-teal-50 to-slate-50 rounded-2xl border border-teal-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm">
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-teal-600 text-white flex items-center justify-center shrink-0">
+              🧪
+            </div>
+            <div>
+              <span class="font-bold text-slate-900">Prescribed Diagnostic Coordination:</span>
+              <p class="text-slate-600 mt-0.5">Patients can complete prescribed blood tests via Capsic Care's Free Home Sample Collection (Howrah &amp; Kolkata) or at any laboratory of their choice. We simply ensure the doctor receives the reports on time.</p>
+            </div>
+          </div>
+          <a href="#calculator" class="shrink-0 px-4 py-2 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-lg text-xs transition-colors">
+            Calculate Impact
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 6. SECTION: PRACTICE RELEVANT CALCULATOR (Solo Doctor Focus) -->
+    <!-- ========================================== -->
+    <section id="calculator" class="py-16 sm:py-24 bg-slate-900 text-white relative overflow-hidden">
+      <!-- Background subtle styling -->
+      <div class="absolute inset-0 bg-radial-gradient from-teal-900/30 via-slate-900 to-slate-950 pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <!-- Calculator Header -->
+        <div class="max-w-3xl mx-auto text-center mb-10 sm:mb-14">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-300 bg-teal-950/80 px-3.5 py-1 rounded-full border border-teal-700/60">
+            Financial &amp; Care Planning Tool
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white mt-3 tracking-tight">
+            Calculate Your Practice's Potential Benefit
+          </h2>
+          <p class="text-sm sm:text-base text-slate-300 mt-3 leading-relaxed">
+            Designed specifically for an independent practitioner or chamber. Estimate how many additional follow-up patients you can retain each month and the resulting net practice contribution.
+          </p>
+
+          <!-- Quick Chamber Presets -->
+          <div class="mt-6 flex flex-wrap items-center justify-center gap-2">
+            <span class="text-xs text-slate-400 font-medium mr-1">Chamber Presets:</span>
+            <button class="calc-preset-btn px-3 py-1.5 rounded-lg text-xs font-bold border transition-all bg-white text-slate-700 border-slate-200" data-preset="general">
+              MBBS General Practice
+            </button>
+            <button class="calc-preset-btn px-3 py-1.5 rounded-lg text-xs font-bold border transition-all bg-teal-600 text-white border-teal-600 shadow-md" data-preset="specialist">
+              Specialist Chamber (MD/MS)
+            </button>
+            <button class="calc-preset-btn px-3 py-1.5 rounded-lg text-xs font-bold border transition-all bg-white text-slate-700 border-slate-200" data-preset="polyclinic">
+              Evening High-Volume OPD
+            </button>
+          </div>
+        </div>
+
+        <!-- Calculator Body Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- Left Column: Inputs & Sliders (7 Sliders) -->
+          <div class="lg:col-span-7 bg-slate-800/90 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-slate-700/80 space-y-6">
+            
+            <div class="border-b border-slate-700 pb-3 flex items-center justify-between">
+              <h3 class="text-base font-bold text-teal-300 flex items-center gap-2">
+                <span>⚙️ Practice Parameters</span>
+              </h3>
+              <span class="text-xs text-slate-400">Slide to customize for your chamber</span>
+            </div>
+
+            <!-- 1. Average patients consulted per month -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <label for="calc-patients" class="font-medium text-slate-200">Average Patients Consulted per Month:</label>
+                <span id="calc-patients-val" class="font-mono font-bold text-teal-300 text-base">220</span>
+              </div>
+              <input type="range" id="calc-patients" min="50" max="1000" step="10" value="220" />
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>50 patients</span>
+                <span>500 patients</span>
+                <span>1,000 patients</span>
+              </div>
+            </div>
+
+            <!-- 2. Percentage of patients who require a follow-up -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <label for="calc-followup-need" class="font-medium text-slate-200">Patients Requiring a Follow-up Review:</label>
+                <span id="calc-followup-need-val" class="font-mono font-bold text-teal-300 text-base">65%</span>
+              </div>
+              <input type="range" id="calc-followup-need" min="20" max="90" step="5" value="65" />
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>20% (Acute care)</span>
+                <span>50% (Standard)</span>
+                <span>90% (Chronic/Titration)</span>
+              </div>
+            </div>
+
+            <!-- 3. Current follow-up return percentage -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <label for="calc-current-return" class="font-medium text-slate-200">Current Return Percentage (Without Coordination):</label>
+                <span id="calc-current-return-val" class="font-mono font-bold text-amber-300 text-base">35%</span>
+              </div>
+              <input type="range" id="calc-current-return" min="10" max="60" step="5" value="35" />
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>10% (Low return)</span>
+                <span>35% (Typical average)</span>
+                <span>60%</span>
+              </div>
+            </div>
+
+            <!-- 4. Estimated follow-up return percentage after structured follow-up -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <label for="calc-new-return" class="font-medium text-slate-200">Expected Return with CareFlow Coordination:</label>
+                <span id="calc-new-return-val" class="font-mono font-bold text-emerald-400 text-base">70%</span>
+              </div>
+              <input type="range" id="calc-new-return" min="30" max="95" step="5" value="70" />
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>30%</span>
+                <span>65% (CareFlow benchmark)</span>
+                <span>95%</span>
+              </div>
+            </div>
+
+            <!-- 5. Average consultation fee -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <label for="calc-consult-fee" class="font-medium text-slate-200">Average Doctor Consultation Fee (₹):</label>
+                <span id="calc-consult-fee-val" class="font-mono font-bold text-teal-300 text-base">₹800</span>
+              </div>
+              <input type="range" id="calc-consult-fee" min="200" max="2500" step="50" value="800" />
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>₹200</span>
+                <span>₹800</span>
+                <span>₹2,500</span>
+              </div>
+            </div>
+
+            <!-- 6. CareFlow Fee (LOCKED & AUTO-CALCULATED VIA TRANSPARENT FORMULA) -->
+            <div class="p-4 bg-slate-900/90 rounded-xl border border-teal-500/40 space-y-2">
+              <div class="flex justify-between items-center">
+                <div class="flex items-center gap-1.5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-teal-400"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                  <span class="text-xs font-bold text-slate-200">
+                    CareFlow Fee per Managed Patient (Post-Trial):
+                  </span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <span class="text-[10px] font-bold text-teal-400 bg-teal-950/80 px-2 py-0.5 rounded border border-teal-700/50">
+                    Auto-Formula (Locked)
+                  </span>
+                  <span id="calc-cf-fee-val" class="font-mono font-black text-emerald-400 text-base">
+                    ₹31
+                  </span>
+                </div>
+              </div>
+              <div class="text-[11px] text-slate-400 leading-relaxed pt-1 border-t border-slate-800">
+                <strong class="text-teal-300">Minimal Formula:</strong> Auto-computed from consultation fee (~4.5%), minus volume discount and booked return reward. Strictly bounded between <strong>₹20 and ₹45</strong>.
+              </div>
+            </div>
+
+            <!-- 7. Successful patient contact percentage -->
+            <div class="space-y-2">
+              <div class="flex justify-between items-center text-xs sm:text-sm">
+                <label for="calc-contact-rate" class="font-medium text-slate-200">Successful Patient Contact Rate:</label>
+                <span id="calc-contact-rate-val" class="font-mono font-bold text-teal-300 text-base">90%</span>
+              </div>
+              <input type="range" id="calc-contact-rate" min="60" max="98" step="2" value="90" />
+              <div class="flex justify-between text-[10px] text-slate-400">
+                <span>60%</span>
+                <span>85% - 90% (Usual reach)</span>
+                <span>98%</span>
+              </div>
+            </div>
+
+            <!-- Free Trial Toggle inside Calculator -->
+            <div class="pt-3 border-t border-slate-700/80 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <input type="checkbox" id="calc-trial-toggle" checked class="w-4 h-4 text-teal-600 rounded focus:ring-teal-500 bg-slate-900 border-slate-600" />
+                <label for="calc-trial-toggle" class="text-xs sm:text-sm font-semibold text-slate-200 cursor-pointer">
+                  Apply 3-Month Free Trial (₹0 Service Cost)
+                </label>
+              </div>
+              <span class="text-[11px] font-bold text-emerald-400 uppercase bg-emerald-950/80 px-2 py-0.5 rounded border border-emerald-700/50">
+                Special Offer
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Outputs & Projected Returns -->
+          <div class="lg:col-span-5 space-y-5">
+            
+            <div class="bg-gradient-to-b from-slate-800 to-slate-850 p-6 sm:p-7 rounded-2xl border border-teal-500/30 shadow-xl relative overflow-hidden">
+              <div class="border-b border-slate-700 pb-3 mb-5">
+                <span class="text-[11px] font-bold tracking-wider uppercase text-teal-400">Estimated Monthly Impact</span>
+                <h4 class="text-lg font-bold text-white mt-0.5">Chamber Projection Summary</h4>
+              </div>
+
+              <!-- Metric 1: Additional Visits -->
+              <div class="mb-4 p-4 bg-slate-900/80 rounded-xl border border-slate-700/60 flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-slate-400">Estimated Additional Follow-up Visits:</p>
+                  <span class="text-xs text-teal-400 font-medium">Patients who return for care</span>
+                </div>
+                <div id="out-additional-visits" class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">
+                  +45
+                </div>
+              </div>
+
+              <!-- Metric 2: Additional Revenue -->
+              <div class="mb-4 p-4 bg-slate-900/80 rounded-xl border border-slate-700/60 flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-slate-400">Potential Additional Consultation Revenue:</p>
+                  <span class="text-xs text-slate-500">Gross monthly consult fees</span>
+                </div>
+                <div id="out-additional-revenue" class="text-xl sm:text-2xl font-black text-white font-mono">
+                  ₹36,000
+                </div>
+              </div>
+
+              <!-- Metric 3: CareFlow Cost -->
+              <div class="mb-4 p-4 bg-slate-900/80 rounded-xl border border-slate-700/60 flex items-center justify-between">
+                <div>
+                  <p class="text-xs text-slate-400">Estimated CareFlow Service Cost:</p>
+                  <span class="text-xs text-slate-500">During 3-Month Free Trial:</span>
+                </div>
+                <div id="out-trial-service-cost" class="font-bold text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded text-sm font-mono">
+                  ₹0 (Free Trial)
+                </div>
+              </div>
+
+              <!-- Metric 4: Net Practice Contribution -->
+              <div class="p-5 bg-teal-950/70 rounded-xl border border-teal-500/40">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-xs font-bold text-teal-300 uppercase tracking-wide">Net Chamber Contribution</span>
+                    <p class="text-[11px] text-teal-200/70">After service cost</p>
+                  </div>
+                  <div id="out-net-contribution" class="text-2xl sm:text-3xl font-black text-emerald-400 font-mono">
+                    ₹36,000
+                  </div>
+                </div>
+                <p class="text-[11px] text-teal-200/80 mt-2">
+                  *During your 3-Month Free Trial, 100% of this additional revenue stays directly with your chamber.
+                </p>
+              </div>
+
+              <!-- Annualized Illustrative Projection -->
+              <div class="mt-5 pt-4 border-t border-slate-700">
+                <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-2">Annualised Illustrative Projection</span>
+                <div class="grid grid-cols-2 gap-3 text-center">
+                  <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-700/60">
+                    <span class="text-[11px] text-slate-400 block">Annual Additional Visits</span>
+                    <span id="out-annual-visits" class="text-base sm:text-lg font-bold text-teal-300 font-mono">~540</span>
+                  </div>
+                  <div class="p-3 bg-slate-900/90 rounded-xl border border-slate-700/60">
+                    <span class="text-[11px] text-slate-400 block">Annual Practice Value</span>
+                    <span id="out-annual-net" class="text-base sm:text-lg font-bold text-emerald-400 font-mono">₹3,95,100</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Call to Action -->
+              <div class="mt-6">
+                <button class="open-trial-modal w-full py-3.5 bg-teal-600 hover:bg-teal-500 text-white rounded-xl text-sm font-bold shadow-lg shadow-teal-500/20 transition-all flex items-center justify-center gap-2">
+                  <span>Start 3-Month Free Trial with These Numbers</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Mandatory Disclaimer -->
+            <div class="p-4 bg-slate-800/60 rounded-xl border border-slate-700/60 text-xs text-slate-400 leading-relaxed">
+              <span class="font-bold text-slate-300">Important Disclaimer:</span>
+              The calculator provides an illustrative estimate based on practice parameters and typical coordination rates. It does not constitute a guaranteed clinical or financial result. Actual return rates vary based on patient demographics, seasonality, and clinical conditions.
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 7. SECTION: 3-MONTH FREE TRIAL SPOTLIGHT -->
+    <!-- ========================================== -->
+    <section class="py-16 sm:py-20 bg-teal-900 text-white relative overflow-hidden">
+      <!-- Glow element matching Capsic Care -->
+      <div class="absolute -right-20 -bottom-20 w-96 h-96 bg-teal-600/20 rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="bg-gradient-to-r from-teal-950 via-teal-900 to-slate-900 p-8 sm:p-12 rounded-3xl border border-teal-500/30 shadow-2xl">
+          
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            
+            <div class="lg:col-span-7">
+              <span class="inline-block px-3 py-1 bg-teal-800/80 text-teal-300 rounded-full text-xs font-bold uppercase tracking-wider mb-4 border border-teal-600/40">
+                Zero Risk • Zero Advance Commitment
+              </span>
+              <h2 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-tight leading-tight mb-4">
+                Test CareFlow in Your Chamber for 3 Months. Completely Free.
+              </h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-6">
+                We invite independent doctors and private chambers in Howrah and Kolkata to experience structured patient follow-up coordination with zero financial risk.
+              </p>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs sm:text-sm text-slate-200 mb-8">
+                <div class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Full 90-Day Access:</strong> Real coordinators calling and reminding your patients.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>No Payment Details Needed:</strong> No advance check, credit card, or deposit.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>No Obligation to Continue:</strong> Continue after 3 months only if you see genuine patient benefit.</span>
+                </div>
+                <div class="flex items-start gap-2.5">
+                  <span class="w-5 h-5 rounded-full bg-emerald-500 text-slate-950 flex items-center justify-center font-bold text-xs shrink-0 mt-0.5">✓</span>
+                  <span><strong>Dedicated Local Coordinators:</strong> Polite staff communicating in Bengali and Hindi.</span>
+                </div>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-4">
+                <button class="open-trial-modal px-8 py-4 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black rounded-xl text-sm sm:text-base transition-colors shadow-lg shadow-emerald-500/20">
+                  Claim 3-Month Free Trial
+                </button>
+                <a href="https://wa.me/918337077656?text=Hello%20Capsic%20Care%2C%20I%20am%20interested%20in%20the%20CareFlow%203-month%20free%20trial%20for%20my%20chamber." target="_blank" rel="noopener noreferrer" class="px-6 py-4 bg-teal-800/80 hover:bg-teal-700/80 text-white font-bold rounded-xl text-sm transition-all border border-teal-600/40 flex items-center gap-2">
+                  <span>Chat on WhatsApp</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Column Quick Trial Form -->
+            <div class="lg:col-span-5 bg-white text-slate-900 p-6 sm:p-7 rounded-2xl shadow-xl">
+              <h3 class="text-base font-bold text-slate-900 mb-1">Doctor Chamber Trial Sign-up</h3>
+              <p class="text-xs text-slate-500 mb-4">Takes less than 60 seconds to activate</p>
+
+              <form id="inline-trial-form" class="space-y-3.5">
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Doctor Name *</label>
+                  <input type="text" id="inline-doc-name" required placeholder="e.g. Dr. A. K. Banerjee" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Degree / Specialization *</label>
+                  <input type="text" id="inline-doc-specialty" required placeholder="e.g. MBBS, General Physician or MD Medicine" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Chamber Location (Howrah / Kolkata) *</label>
+                  <input type="text" id="inline-doc-chamber" required placeholder="e.g. Bankra / Shibpur / Shyambazar" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+                </div>
+                <div>
+                  <label class="block text-xs font-semibold text-slate-700 mb-1">Mobile / WhatsApp Number *</label>
+                  <input type="tel" id="inline-doc-phone" required placeholder="10-digit mobile number" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-xs focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+                </div>
+                <button type="submit" class="w-full py-3 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition-colors mt-2">
+                  Activate 3-Month Free Trial
+                </button>
+              </form>
+
+              <!-- Inline Success State -->
+              <div id="inline-trial-success" class="hidden text-center py-6 space-y-3">
+                <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-xl font-bold">✓</div>
+                <h4 class="font-bold text-slate-900 text-sm">Trial Request Received!</h4>
+                <p class="text-xs text-slate-600 leading-relaxed">Our doctor coordination coordinator will connect with you within 2 business hours to configure your chamber workflow.</p>
+                <a id="inline-wa-confirm-btn" href="#" target="_blank" class="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-600 text-white text-xs font-bold rounded-lg hover:bg-emerald-700">
+                  <span>Fast-Track on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 8. SECTION: LOCAL MARKET POSITIONING (Howrah & Kolkata) -->
+    <!-- ========================================== -->
+    <section id="coverage" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100 px-3.5 py-1 rounded-full border border-teal-200">
+            Initial Geographical Focus
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            Serving Independent Doctors in Howrah &amp; Kolkata
+          </h2>
+          <p class="text-sm sm:text-base md:text-lg text-slate-600 mt-3 leading-relaxed">
+            CareFlow understands the unique rhythm of private chambers, polyclinics, and neighbourhood doctor chambers across the twin cities.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          
+          <!-- Howrah Region -->
+          <div class="bg-white p-7 sm:p-8 rounded-2xl border border-slate-200 shadow-sm capsic-card-hover">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 font-bold">
+                📍
+              </span>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Howrah Private Practice Network</h3>
+                <p class="text-xs text-slate-500">Chamber Coordination &amp; Home Diagnostics</p>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Dedicated support for solo MBBS practitioners, general physicians, and specialist chambers across prominent medical pockets:
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Bankra Bazar</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Domjur</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Kona Expressway</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Shibpur</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Kadamtala</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Santragachi</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Bally</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Uluberia</span>
+            </div>
+            <div class="p-3 bg-teal-50/70 rounded-xl border border-teal-200 text-xs text-teal-900">
+              <strong>Capsic Care Center Presence:</strong> Supported by our central hub at Bankra Bazar, Dewan Para Road, Domjur, Howrah.
+            </div>
+          </div>
+
+          <!-- Kolkata Region -->
+          <div class="bg-white p-7 sm:p-8 rounded-2xl border border-slate-200 shadow-sm capsic-card-hover">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-10 h-10 rounded-xl bg-teal-50 border border-teal-200 flex items-center justify-center text-teal-700 font-bold">
+                📍
+              </span>
+              <div>
+                <h3 class="text-lg font-bold text-slate-900">Kolkata Doctor Chambers</h3>
+                <p class="text-xs text-slate-500">Private Chambers &amp; Individual Consultations</p>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Structured patient reminders and follow-up tracking tailored for busy evening OPDs and private chambers throughout Kolkata:
+            </p>
+            <div class="flex flex-wrap gap-2 text-xs font-medium text-slate-700 mb-5">
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Shyambazar</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Park Circus</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Gariahat</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Salt Lake</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Behala</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Dum Dum</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Newtown</span>
+              <span class="px-2.5 py-1 bg-slate-100 rounded-md border border-slate-200">Jadavpur</span>
+            </div>
+            <div class="p-3 bg-teal-50/70 rounded-xl border border-teal-200 text-xs text-teal-900">
+              <strong>Local Linguistic Touch:</strong> Courteous communication matching local patient demographics in fluent Bengali, Hindi, and English.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 9. SECTION: DOCTORS' PERSPECTIVE & TESTIMONIALS (Authentic Capsic Assets) -->
+    <!-- ========================================== -->
+    <section class="py-16 sm:py-20 bg-white border-b border-slate-200">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100 px-3.5 py-1 rounded-full border border-teal-200">
+            Practitioner Perspectives
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            Built with Real Doctor Feedback
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-3">
+            How structured post-consultation support changes the dynamic of an independent chamber.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Doctor 1: Dr. Tooneer Mallik -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center flex flex-col items-center capsic-card-hover">
+            <img src="assets/doctors/dr-tooneer-mallik.png" alt="Dr. Tooneer Mallik" class="w-20 h-20 rounded-full object-cover border-2 border-teal-500 mb-4 shadow-sm" />
+            <h3 class="text-sm font-bold text-slate-900">Dr. Tooneer Mallik</h3>
+            <span class="text-[11px] text-teal-700 font-semibold mb-3">Consultant Physician</span>
+            <p class="text-xs text-slate-600 italic leading-relaxed">
+              "In a solo chamber, 40% of patients forget their review date once acute pain subsides. CareFlow's structured reminders ensure clinical continuity without placing a burden on my assistant."
+            </p>
+          </div>
+
+          <!-- Doctor 2: Dr. Wasim Karim -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center flex flex-col items-center capsic-card-hover">
+            <img src="assets/doctors/dr-wasim-karim.jpg" alt="Dr. Wasim Karim" class="w-20 h-20 rounded-full object-cover border-2 border-teal-500 mb-4 shadow-sm" />
+            <h3 class="text-sm font-bold text-slate-900">Dr. Wasim Karim</h3>
+            <span class="text-[11px] text-teal-700 font-semibold mb-3">General Practitioner</span>
+            <p class="text-xs text-slate-600 italic leading-relaxed">
+              "The biggest advantage is that I do not have to touch any app or software. My chamber staff simply forwards the day's review dates, and CareFlow coordinates the rest."
+            </p>
+          </div>
+
+          <!-- Doctor 3: Dr. Priti Medda -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center flex flex-col items-center capsic-card-hover">
+            <img src="assets/doctors/dr-priti-medda.jpg" alt="Dr. Priti Medda" class="w-20 h-20 rounded-full object-cover border-2 border-teal-500 mb-4 shadow-sm" />
+            <h3 class="text-sm font-bold text-slate-900">Dr. Priti Medda</h3>
+            <span class="text-[11px] text-teal-700 font-semibold mb-3">Consultant Specialist</span>
+            <p class="text-xs text-slate-600 italic leading-relaxed">
+              "When diabetic or antenatal patients get polite reminders in Bengali, they feel personally cared for. Our return compliance increased dramatically during the trial."
+            </p>
+          </div>
+
+          <!-- Doctor 4: Dr. Parvez Ahmed Khan -->
+          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-200 text-center flex flex-col items-center capsic-card-hover">
+            <img src="assets/doctors/dr-parvez-ahmed-khan.jpg" alt="Dr. Parvez Ahmed Khan" class="w-20 h-20 rounded-full object-cover border-2 border-teal-500 mb-4 shadow-sm" />
+            <h3 class="text-sm font-bold text-slate-900">Dr. Parvez Ahmed Khan</h3>
+            <span class="text-[11px] text-teal-700 font-semibold mb-3">Clinical Consultant</span>
+            <p class="text-xs text-slate-600 italic leading-relaxed">
+              "Patients frequently delayed prescribed blood tests. With coordination, reports are ready when the patient steps into the chamber for review."
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 10. SECTION: DOCTOR FAQ (PRACTICE SPECIFIC) -->
+    <!-- ========================================== -->
+    <section id="faq" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-12">
+          <span class="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100 px-3.5 py-1 rounded-full border border-teal-200">
+            Clear Answers for Clinicians
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 mt-3 tracking-tight">
+            Frequently Asked Questions by Independent Doctors
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-2">
+            Everything you need to know about CareFlow's coordination service and 3-month free trial.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- FAQ 1 -->
+          <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:text-teal-700 transition-colors" aria-expanded="false">
+              <span>Will my patients think someone else is giving them medical advice?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-200 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              <strong>Absolutely not.</strong> CareFlow coordinators never offer medical advice, alter doses, or interpret clinical findings. They introduce themselves strictly as administrative care coordinators from your chamber ("Dr. [Your Name]'s Chamber Coordination Desk"), following your exact written follow-up date and investigation checklist. If a patient asks a clinical question, they are advised to consult you.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:text-teal-700 transition-colors" aria-expanded="false">
+              <span>Does my chamber assistant or compounder need to learn complex software?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-200 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              <strong>No.</strong> There is zero software to install. Your chamber staff can simply take a photo of the day's patient register / token slips or share the names and review dates via our dedicated WhatsApp chamber desk. Our team takes care of all digitisation and calling.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:text-teal-700 transition-colors" aria-expanded="false">
+              <span>How does the 3-Month Free Trial work? Are there hidden fees?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-200 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              The 3-Month Free Trial is completely free of charge. No credit card, bank deposit, or advance payment is required. You can test CareFlow on your actual chamber patients for a full 90 days. If you find it valuable, you can choose to continue at our nominal per-managed-patient rate (typically ₹35–₹50); if not, service terminates with zero obligation.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:text-teal-700 transition-colors" aria-expanded="false">
+              <span>Are patients forced to use Capsic Care for prescribed blood tests?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-200 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              <strong>Never.</strong> Patients have total freedom to complete tests at any diagnostic centre of their preference. For convenience, Capsic Care offers Free Home Sample Collection in Howrah and Kolkata if the test amount exceeds ₹2,000, which many patients appreciate. Our primary goal is simply ensuring the patient completes the prescribed tests before their review consultation.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item bg-white rounded-xl border border-slate-200 shadow-xs overflow-hidden">
+            <button class="faq-toggle w-full px-6 py-4 text-left font-bold text-slate-900 flex justify-between items-center text-sm sm:text-base hover:text-teal-700 transition-colors" aria-expanded="false">
+              <span>How do you protect patient privacy and contact confidentiality?</span>
+              <svg class="faq-icon w-5 h-5 text-slate-400 transform transition-transform duration-200 shrink-0" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4 text-xs sm:text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+              Patient data is strictly confidential and used solely for coordinating follow-ups on your chamber's behalf. It is never sold, shared, or used for commercial marketing. All communication logs are encrypted and maintained with clinical-grade discretion.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================== -->
+    <!-- 11. FINAL CTA BANNER (Capsic Care Dark Slate) -->
+    <!-- ========================================== -->
+    <section class="py-16 sm:py-20 bg-slate-900 text-white text-center relative overflow-hidden">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <span class="text-xs font-bold uppercase tracking-wider text-teal-300 bg-teal-950 px-3.5 py-1 rounded-full border border-teal-800">
+          Start Before Your Next Chamber Session
+        </span>
+        <h2 class="text-2xl sm:text-4xl md:text-5xl font-black mt-4 mb-4 tracking-tight">
+          Stay Connected with Every Patient You Treat.
+        </h2>
+        <p class="text-slate-300 text-sm sm:text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+          Join independent doctors across Howrah and Kolkata who trust CareFlow to manage post-consultation follow-ups and care continuity.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <button class="open-trial-modal px-8 py-4 bg-teal-600 hover:bg-teal-500 text-white font-bold rounded-xl text-sm sm:text-base transition-colors shadow-lg shadow-teal-500/25 flex items-center gap-2">
+            <span>Start Your 3-Month Free Trial</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+          </button>
+          <a href="tel:+918337077656" class="px-7 py-4 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 rounded-xl font-bold text-sm sm:text-base transition-colors flex items-center gap-2">
+            <span>📞 Call Doctor Desk: 8337077656</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================== -->
+  <!-- 12. FOOTER (Exact Replica of Capsic Care Footers) -->
+  <!-- ========================================== -->
+  <footer class="bg-slate-900 text-slate-300 border-t border-slate-700">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+        
+        <!-- Col 1: Brand & Helpline -->
+        <div class="sm:col-span-2 md:col-span-1">
+          <div class="flex items-center space-x-2 mb-4">
+            <img src="assets/brand/capsic-logo.png" alt="Capsic Care Logo" class="w-10 h-10 rounded-lg object-contain" />
+            <div>
+              <span class="font-bold text-base md:text-lg text-white block leading-tight">Capsic Care</span>
+              <span class="text-[10px] text-teal-400 font-bold uppercase tracking-wider">CareFlow Vertical</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            CareFlow by CAPSIC CARE: Patient follow-up and care coordination support tailored for independent doctors and private chambers in Howrah &amp; Kolkata.
+          </p>
+          <div class="p-3 bg-slate-800/80 rounded-xl border border-slate-700/60 text-xs text-slate-300 space-y-1">
+            <p class="font-bold text-teal-300">Doctor Chamber Helpline:</p>
+            <p>Contact: <a href="tel:+918337077656" class="text-white hover:text-teal-300 font-bold underline">8337077656</a> or <a href="https://wa.me/918337077656?text=Hello%20Capsic%20Care%2C%20I%20have%20an%20inquiry%20regarding%20CareFlow." target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:text-emerald-300 font-bold underline">WhatsApp</a></p>
+          </div>
+        </div>
+
+        <!-- Col 2: CareFlow Navigation -->
+        <div>
+          <h4 class="font-semibold text-white mb-3 text-sm md:text-base">CareFlow Solutions</h4>
+          <ul class="space-y-2 text-xs md:text-sm text-slate-400">
+            <li><a href="#overview" class="hover:text-teal-400 transition-colors">Overview</a></li>
+            <li><a href="#chamber-challenge" class="hover:text-teal-400 transition-colors">The Chamber Reality</a></li>
+            <li><a href="#how-it-works" class="hover:text-teal-400 transition-colors">How It Works</a></li>
+            <li><a href="#calculator" class="hover:text-teal-400 transition-colors">Practice Benefit Calculator</a></li>
+            <li><a href="#coverage" class="hover:text-teal-400 transition-colors">Howrah &amp; Kolkata Chambers</a></li>
+            <li><a href="#" class="open-trial-modal text-teal-400 font-semibold hover:text-teal-300 transition-colors">3-Month Free Trial</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Capsic Care Ecosystem Services -->
+        <div>
+          <h4 class="font-semibold text-white mb-3 text-sm md:text-base">Capsic Care Services</h4>
+          <ul class="space-y-2 text-xs md:text-sm text-slate-400">
+            <li><a href="https://www.capsic.in/services" target="_blank" class="hover:text-teal-400 transition-colors">Doctor Consultation</a></li>
+            <li><a href="https://www.capsic.in/lab-tests" target="_blank" class="hover:text-teal-400 transition-colors">Lab Tests &amp; Diagnostics</a></li>
+            <li><a href="https://www.capsic.in/health-packages" target="_blank" class="hover:text-teal-400 transition-colors">Preventive Health Packages</a></li>
+            <li><a href="https://www.capsic.in/doctors" target="_blank" class="hover:text-teal-400 transition-colors">Specialist Network</a></li>
+            <li><a href="https://www.capsic.in/business-opportunity" target="_blank" class="text-teal-400 font-semibold hover:text-teal-300 transition-colors">Partner With Us</a></li>
+            <li><a href="https://www.capsic.in/contact" target="_blank" class="hover:text-teal-400 transition-colors">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Clinic Address & Verification -->
+        <div>
+          <h4 class="font-semibold text-white mb-3 text-sm md:text-base">Clinic &amp; Centre Address</h4>
+          <div class="text-xs text-slate-400 space-y-2 leading-relaxed">
+            <p class="font-semibold text-slate-200">Capsic Care Centre</p>
+            <p>Bankra Bazar, Dewan Para Road</p>
+            <p>Domjur, Howrah – 711403</p>
+            <p class="pt-2 text-slate-300">
+              <strong>Email:</strong> <a href="mailto:capsiccare@gmail.com" class="hover:text-teal-300">capsiccare@gmail.com</a>
+            </p>
+            <p class="text-slate-300">
+              <strong>Phone:</strong> <a href="tel:+918337077656" class="hover:text-teal-300">+91 8337077656</a>
+            </p>
+            <p class="text-slate-400 text-[11px] pt-1">
+              Serving Howrah &amp; Kolkata, West Bengal, India
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Line -->
+      <div class="border-t border-slate-800 pt-6 mt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-3">
+        <p>© 2024–2026 Capsic Care. All rights reserved. CareFlow is an official business vertical of Capsic Care.</p>
+        <p class="text-[11px] text-slate-400">Isolated path: <code class="text-teal-400">/careflow/</code> • Main site: <a href="https://www.capsic.in/" target="_blank" class="hover:underline text-teal-400">capsic.in</a></p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ========================================== -->
+  <!-- 13. MODAL: "START YOUR 3-MONTH FREE TRIAL" -->
+  <!-- ========================================== -->
+  <div id="trial-modal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-slate-950/80 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-in fade-in zoom-in duration-200">
+      
+      <!-- Close Button -->
+      <button class="close-trial-modal absolute top-4 right-4 text-slate-400 hover:text-slate-700 p-1 rounded-lg" aria-label="Close modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line></svg>
+      </button>
+
+      <!-- Modal Content Header -->
+      <div class="mb-5">
+        <span class="inline-block px-2.5 py-0.5 bg-teal-100 text-teal-800 text-[11px] font-bold uppercase rounded-full mb-2">
+          3-Month Free Trial • No Credit Card Required
+        </span>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">
+          Start Your Chamber Free Trial
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-600 mt-1">
+          For independent doctors &amp; individual chambers in Howrah &amp; Kolkata.
+        </p>
+      </div>
+
+      <!-- Form -->
+      <form id="trial-form" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1" for="modal-doc-name">Doctor Name *</label>
+          <input type="text" id="modal-doc-name" required placeholder="e.g. Dr. Subhash Chandra Roy" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="modal-doc-specialty">Degree / Specialty *</label>
+            <input type="text" id="modal-doc-specialty" required placeholder="e.g. MBBS / MD / DNB" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs font-semibold text-slate-700 mb-1" for="modal-doc-phone">Mobile / WhatsApp *</label>
+            <input type="tel" id="modal-doc-phone" required placeholder="10-digit number" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1" for="modal-doc-chamber">Chamber Name &amp; Area (Howrah / Kolkata) *</label>
+          <input type="text" id="modal-doc-chamber" required placeholder="e.g. Roy Chamber, Bankra Bazar, Howrah" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none" />
+        </div>
+
+        <div>
+          <label class="block text-xs font-semibold text-slate-700 mb-1" for="modal-doc-patients">Approximate Monthly Patients Consulted</label>
+          <select id="modal-doc-patients" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none bg-white">
+            <option value="100-250">100 – 250 patients / month</option>
+            <option value="250-500" selected>250 – 500 patients / month</option>
+            <option value="500-800">500 – 800 patients / month</option>
+            <option value="800+">800+ patients / month</option>
+          </select>
+        </div>
+
+        <div class="p-3 bg-teal-50 rounded-xl border border-teal-200 text-xs text-teal-900 leading-relaxed">
+          🔒 <strong>Practitioner Assurance:</strong> Your contact details and patient registers are kept strictly confidential under Capsic Care clinical privacy protocols.
+        </div>
+
+        <button type="submit" class="w-full py-3.5 bg-teal-600 hover:bg-teal-700 text-white font-bold rounded-xl text-sm shadow-md transition-all">
+          Activate 3-Month Free Trial Now
+        </button>
+      </form>
+
+      <!-- Modal Success State -->
+      <div id="trial-success" class="hidden text-center py-6 space-y-4">
+        <div class="w-16 h-16 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-3xl font-black">✓</div>
+        <h4 class="text-xl font-bold text-slate-900">Trial Request Confirmed!</h4>
+        <p class="text-xs sm:text-sm text-slate-600 max-w-sm mx-auto leading-relaxed">
+          Thank you, Doctor. Our dedicated care coordination desk will reach out to schedule a brief 10-minute workflow setup for your chamber.
+        </p>
+        <div class="pt-2">
+          <a id="modal-wa-confirm-btn" href="#" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition-all">
+            <span>Fast-Track on WhatsApp</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/calculator.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

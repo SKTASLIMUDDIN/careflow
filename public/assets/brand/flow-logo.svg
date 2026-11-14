@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 56" fill="none" class="flow-brand-svg">
+  <defs>
+    <linearGradient id="flowTealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#0f766e" />
+    </linearGradient>
+  </defs>
+  <!-- Flow Medical Pulse & Ribbon Node -->
+  <g transform="translate(2, 6)">
+    <rect x="0" y="0" width="44" height="44" rx="12" fill="url(#flowTealGrad)" />
+    <!-- Dynamic Care Wave Path -->
+    <path d="M10 22 H16 L19 14 L24 30 L28 20 L30 22 H34" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Orbit Care Dot -->
+    <circle cx="31" cy="12" r="3" fill="#5eead4" />
+  </g>
+  <!-- Wordmark Text -->
+  <g transform="translate(56, 12)">
+    <text x="0" y="22" font-family="'Geist', 'Segoe UI', -apple-system, sans-serif" font-size="26" font-weight="900" fill="#0f172a" letter-spacing="-0.5">
+      Flow
+    </text>
+    <text x="1" y="34" font-family="'Geist', 'Segoe UI', -apple-system, sans-serif" font-size="9" font-weight="800" fill="#64748b" letter-spacing="1.2">
+      BY CAPSIC CARE
+    </text>
+  </g>
+</svg>

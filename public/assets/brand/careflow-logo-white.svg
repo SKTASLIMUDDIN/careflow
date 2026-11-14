@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 64" fill="none" class="careflow-brand-svg-white">
+  <defs>
+    <linearGradient id="cfTealGradWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+  </defs>
+  <!-- CareFlow Emblem / Flow Heartbeat Node -->
+  <g transform="translate(4, 8)">
+    <rect x="0" y="0" width="48" height="48" rx="14" fill="url(#cfTealGradWhite)" />
+    <!-- Medical Flow Ribbon & Pulse Path -->
+    <path d="M12 24 H18 L21 16 L27 32 L31 22 L33 24 H36" stroke="#ffffff" stroke-width="2.75" stroke-linecap="round" stroke-linejoin="round" />
+    <!-- Caring Follow-up Orbit Dot -->
+    <circle cx="34" cy="14" r="3.5" fill="#a7f3d0" />
+  </g>
+  <!-- Wordmark Text -->
+  <g transform="translate(62, 12)">
+    <text x="0" y="24" font-family="'Geist', 'Segoe UI', -apple-system, sans-serif" font-size="24" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Care<tspan fill="#2dd4bf">Flow</tspan>
+    </text>
+    <text x="1" y="38" font-family="'Geist', 'Segoe UI', -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#94a3b8" letter-spacing="1.2">
+      BY CAPSIC CARE
+    </text>
+  </g>
+</svg>
