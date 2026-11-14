@@ -1,40 +1,41 @@
 import React from 'react';
+import { CalendarX2, FlaskConical, Users, MapPin, Activity, Handshake } from 'lucide-react';
 
 export default function ChamberReality() {
   const challenges = [
     {
-      icon: '📅',
+      icon: CalendarX2,
       title: 'Patients Discontinue Follow-up Too Early',
       description:
         'When initial acute symptoms improve after 4 or 5 days of medicine, patients frequently assume they are cured and fail to return for their crucial 14-day or 30-day clinical review.',
     },
     {
-      icon: '🧪',
+      icon: FlaskConical,
       title: 'Prescribed Investigations Remain Incomplete',
       description:
         'You prescribe an ultrasound, lipid panel, or HbA1c to assess treatment efficacy. Without a reminder, patients postpone the test, leaving you without necessary clinical data.',
     },
     {
-      icon: '⏳',
+      icon: Users,
       title: 'Chambers Have Limited Support Staff',
       description:
         'Your chamber assistant or compounder is fully occupied managing OPD queues, files, and physical tokens. Expecting them to dial 300+ patients monthly is operationally impossible.',
     },
     {
-      icon: '🚗',
+      icon: MapPin,
       title: 'Consulting Across Multiple Locations',
       description:
         'Visiting private chambers in Bankra, Shibpur, or Shyambazar leaves no time between morning and evening clinics to call patients individually regarding their progress.',
     },
     {
-      icon: '💊',
+      icon: Activity,
       title: 'Chronic Disease Management Drop-offs',
       description:
         'Hypertension, diabetes, thyroid, and cardiac patients require consistent titration and checkups. When follow-ups drop, long-term health outcomes and doctor-patient bonds suffer.',
     },
     {
-      icon: '🤝',
-      title: 'CareFlow is Operational Support, Not Criticism',
+      icon: Handshake,
+      title: 'Operational Support, Not Criticism',
       description:
         'You are doing everything right clinically. CareFlow simply acts as your chamber’s courteous, dedicated coordination extension, closing the administrative loop seamlessly.',
       highlight: true,
@@ -42,54 +43,57 @@ export default function ChamberReality() {
   ];
 
   return (
-    <section id="chamber-challenge" className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+    <section id="chamber-challenge" className="py-20 sm:py-24 bg-slate-50/70 border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-12 sm:mb-16">
-          <span className="text-xs font-bold uppercase tracking-wider text-teal-700 bg-teal-100 px-3.5 py-1 rounded-full border border-teal-200">
-            For Solo Practitioners &amp; Individual Chambers
+        <div className="max-w-3xl mx-auto text-center mb-14 sm:mb-16">
+          <span className="text-xs font-bold uppercase tracking-wider text-teal-800 bg-teal-50 px-3 py-1 rounded-full border border-teal-200">
+            The Solo Practice Reality
           </span>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mt-3 tracking-tight">
-            The Everyday Reality of an Independent Practice
+            Understanding the Independent Doctor
           </h2>
-          <p className="text-sm sm:text-base md:text-lg text-slate-600 mt-3 leading-relaxed">
-            As an independent doctor in Howrah or Kolkata, you give your complete clinical dedication to every patient. But once the consultation ends, managing the follow-up loop is an uphill battle without dedicated administrative staff.
+          <p className="text-sm sm:text-base text-slate-600 mt-3 leading-relaxed">
+            As a medical practitioner in Howrah or Kolkata, your focus is clinical care during busy OPD hours. But after consultations end, patient follow-up coordination often lacks dedicated administrative bandwidth.
           </p>
         </div>
 
-        {/* 6 Doctor Chamber Challenges Grid */}
+        {/* 6 Clean Minimal Challenge Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {challenges.map((item, index) => (
-            <div
-              key={index}
-              className={`p-7 rounded-2xl shadow-sm border transition-all duration-300 capsic-card-hover ${
-                item.highlight
-                  ? 'bg-gradient-to-br from-teal-50 to-emerald-50/60 border-teal-200'
-                  : 'bg-white border-slate-200'
-              }`}
-            >
+          {challenges.map((item, index) => {
+            const Icon = item.icon;
+            return (
               <div
-                className={`w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-4 ${
+                key={index}
+                className={`p-7 rounded-2xl transition-all duration-300 border ${
                   item.highlight
-                    ? 'bg-teal-600 text-white'
-                    : 'bg-teal-50 border border-teal-200 text-teal-700'
+                    ? 'bg-gradient-to-br from-teal-50/90 to-emerald-50/60 border-teal-200/90 shadow-sm'
+                    : 'bg-white border-slate-200/80 hover:border-slate-300 shadow-2xs'
                 }`}
               >
-                {item.icon}
+                <div
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center mb-4 ${
+                    item.highlight
+                      ? 'bg-teal-600 text-white'
+                      : 'bg-slate-100 text-slate-700 border border-slate-200/60'
+                  }`}
+                >
+                  <Icon className="w-5 h-5" />
+                </div>
+                <h3
+                  className={`text-base font-bold mb-2 ${
+                    item.highlight ? 'text-teal-950' : 'text-slate-900'
+                  }`}
+                >
+                  {item.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+                  {item.description}
+                </p>
               </div>
-              <h3
-                className={`text-base sm:text-lg font-bold mb-2 ${
-                  item.highlight ? 'text-teal-950' : 'text-slate-900'
-                }`}
-              >
-                {item.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                {item.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>
